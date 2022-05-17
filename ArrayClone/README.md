@@ -6,4 +6,6 @@ It is a collection of contiguous elements in which individual
 elements are identified by a unique integer subscript starting with zero. Once an
 array is created, its size cannot be changed.
 
-This project will host a One dimensional array created to mimic the behavior of arrays in other programming Languages 
+This project will host a One dimensional array created to mimic the behavior of arrays in other programming Languages
+
+Comments are provided to highlight the use of the operator methods
