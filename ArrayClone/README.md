@@ -9,3 +9,5 @@ array is created, its size cannot be changed.
 This project will host a One dimensional array created to mimic the behavior of arrays in other programming Languages
 
 Comments are provided to highlight the use of the operator methods
+
+We will be making use of the "ctypes module" to implement our array abstract data type(ADT)
