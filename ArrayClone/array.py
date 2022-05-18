@@ -4,6 +4,7 @@ import ctypes
 
 class Array:
     """Creates an array with size element"""
+
     def __init__(self, size):
         assert size > 0, "Array size must be > 0"
         self._size = size
@@ -11,7 +12,7 @@ class Array:
         PyArrayType = ctypes.py_object * size
         self._elements = PyArrayType()
         # Initialize each element.
-        self.clear(None)
+        self.clear(None)  # the initialisation of this array is done by calling the clear method
 
     # Returns the size of the array.
     def __len__(self):
@@ -38,7 +39,7 @@ class Array:
 
 
 # An iterator for the Array ADT.
-class _ArrayIterator :
+class _ArrayIterator:
     def __init__(self, theArray):
         self._arrayRef = theArray
         self._curNdx = 0
