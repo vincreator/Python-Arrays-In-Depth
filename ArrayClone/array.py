@@ -4,7 +4,6 @@ import ctypes
 
 class Array:
     """Creates an array with size element"""
-
     def __init__(self, size):
         assert size > 0, "Array size must be > 0"
         self._size = size
