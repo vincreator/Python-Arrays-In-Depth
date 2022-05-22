@@ -76,9 +76,8 @@ class Array2D:
 
     # Clears the array by setting every element to the given value.
     def clear(self, value):
-        for row in range(self.numRows()):
-            for i in range(self.numCols()):
-                self._elements[i] = value
+        for row in self._theRows:
+            row.clear(value)
 
     # Gets the content of the elements at the position  [i, j]
     def __getitem__(self, ndxTuple):
@@ -98,4 +97,4 @@ class Array2D:
         theIdArray = self._theRows[row]
         theIdArray[col] = value
 
-
+    
