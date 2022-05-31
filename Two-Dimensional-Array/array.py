@@ -13,7 +13,7 @@ class Array:
         # Initialize each element.
         self.clear(None)  # the initialisation of this array is done by calling the clear method
 
-    # Returns the size of the array.
+    # Returns the size of the array.array2d.clear(7)
     def __len__(self):
         return self._size
 
@@ -97,4 +97,10 @@ class Array2D:
         theIdArray = self._theRows[row]
         theIdArray[col] = value
 
-    
+    # the snapshot function displays the structure of the array stored in a list
+    def snapshot(self):
+        arrayItems = []
+        for row in self._theRows:
+            for i in row:
+                arrayItems.append(i)
+        print(arrayItems)
