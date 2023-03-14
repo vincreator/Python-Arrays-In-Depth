@@ -47,9 +47,8 @@ class _ArrayIterator:
         return self
 
     def __next__(self):
-        if self._curNdx < len(self._arrayRef):
-            entry = self._arrayRef[self._curNdx]
-            self._curNdx += 1
-            return entry
-        else:
+        if self._curNdx >= len(self._arrayRef):
             raise StopIteration
+        entry = self._arrayRef[self._curNdx]
+        self._curNdx += 1
+        return entry
