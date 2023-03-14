@@ -47,12 +47,11 @@ class _ArrayIterator:
         return self
 
     def __next__(self):
-        if self._curNdx < len(self._arrayRef):
-            entry = self._arrayRef[self._curNdx]
-            self._curNdx += 1
-            return entry
-        else:
+        if self._curNdx >= len(self._arrayRef):
             raise StopIteration
+        entry = self._arrayRef[self._curNdx]
+        self._curNdx += 1
+        return entry
 
 
 # Implementation of the Array2D ADT using arrays of arrays
@@ -101,6 +100,5 @@ class Array2D:
     def snapshot(self):
         arrayItems = []
         for row in self._theRows:
-            for i in row:
-                arrayItems.append(i)
+            arrayItems.extend(iter(row))
         print(arrayItems)
